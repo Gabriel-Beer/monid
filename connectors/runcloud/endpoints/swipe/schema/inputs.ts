@@ -6,8 +6,8 @@ import { zPoint } from "../../../schema/common.ts";
 export const zSwipeBody = z.object({
     from: zPoint.describe("Where the finger lands."),
     to: zPoint.describe("Where the finger lifts."),
-    durationMs: z.number().int().min(50).max(30_000).optional().describe(
+    durationMs: z.number().int().min(50).max(30_000).describe(
         "Swipe duration in milliseconds (50-30000, vendor default 300). " +
             "Slower swipes scroll less.",
-    ),
+    ).optional(),
 }).strict();

@@ -18,7 +18,7 @@
                         "height": 800,
                         "unit": "points"
                     },
-                    "nodeCount": 5,
+                    "nodeCount": 6,
                     "truncated": false,
                     "roots": [
                         {
@@ -177,6 +177,41 @@
                                                 "focused": false,
                                                 "selected": null,
                                                 "checked": null,
+                                                "expanded": null,
+                                                "focusable": true,
+                                                "clickable": true,
+                                                "scrollable": null,
+                                                "editable": false,
+                                                "secure": false
+                                            },
+                                            "native": {
+                                                "platform": "ios",
+                                                "type": "Button",
+                                                "roleDescription": null,
+                                                "subrole": null,
+                                                "title": null,
+                                                "help": null
+                                            },
+                                            "children": []
+                                        },
+                                        {
+                                            "id": "n5",
+                                            "path": "0.0.3",
+                                            "role": "switch",
+                                            "label": "Remember me",
+                                            "value": null,
+                                            "identifier": "remember-me",
+                                            "bounds": {
+                                                "x": 300,
+                                                "y": 700,
+                                                "width": 60,
+                                                "height": 40
+                                            },
+                                            "states": {
+                                                "enabled": true,
+                                                "focused": null,
+                                                "selected": false,
+                                                "checked": true,
                                                 "expanded": null,
                                                 "focusable": true,
                                                 "clickable": true,

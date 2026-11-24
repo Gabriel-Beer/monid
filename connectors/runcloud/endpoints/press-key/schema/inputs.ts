@@ -73,9 +73,9 @@ export const zPressKeyBody = z.object({
             "backspace, escape, tab, arrowDown.",
     ),
     modifiers: z.array(z.enum(["shift", "control", "alt", "meta"])).max(4)
-        .optional().describe(
+        .describe(
             "Modifier keys to hold, each at most once (e.g. ['meta'] with " +
                 "key 'a' selects all).",
-        ),
+        ).optional(),
     durationMs: zPressDurationMs.optional(),
 }).strict();

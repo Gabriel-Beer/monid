@@ -12,21 +12,21 @@ export const zStartSessionPathParams = z.object({
  * default-free; the short-session defaults live at the binding.
  */
 export const zStartSessionBody = z.object({
-    model: z.string().min(1).max(100).optional().describe(
+    model: z.string().min(1).max(100).describe(
         "Device family: 'iphone' (default) or 'ipad' on iOS, 'pixel' " +
             "(default) on Android.",
-    ),
-    installAssets: z.array(z.string().min(1)).max(10).optional().describe(
+    ).optional(),
+    installAssets: z.array(z.string().min(1)).max(10).describe(
         "Up to 10 unique run.cloud asset ids (uploaded .app.zip/.apk " +
             "builds) to install when the session starts.",
-    ),
-    inactivityTimeout: z.string().regex(/^(\d+[smh]|none)$/).optional()
+    ).optional(),
+    inactivityTimeout: z.string().regex(/^(\d+[smh]|none)$/)
         .describe(
             "Close the session after this long without activity, e.g. " +
                 "'60s', '5m', '1h', or 'none'.",
-        ),
-    hardTimeout: z.string().regex(/^\d+[smh]$/).optional().describe(
+        ).optional(),
+    hardTimeout: z.string().regex(/^\d+[smh]$/).describe(
         "Maximum session lifetime, e.g. '10m' or '1h' (vendor maximum " +
             "195 minutes).",
-    ),
+    ).optional(),
 }).strict();

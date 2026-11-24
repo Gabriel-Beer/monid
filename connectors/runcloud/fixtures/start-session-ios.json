@@ -1,11 +1,11 @@
 {
-    "name": "live-start-ios",
-    "description": "raw recording (runcloud#start-session, scenario live-start-ios) \u2014 hand-minimize into a shared chain before committing",
+    "name": "start-session-ios",
+    "description": "runcloud#start-session: a recorded live iOS start (2026-11-16, api.run.cloud), ids and token redacted",
     "calls": [
         {
             "req": {
                 "method": "POST",
-                "url": "https://api.run.cloud/run-cloud/ios",
+                "url": "{{request.origin}}/run-cloud/ios",
                 "body": {
                     "inactivityTimeout": "2m",
                     "hardTimeout": "5m"
